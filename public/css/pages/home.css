@@ -53,7 +53,7 @@ a {
 }
 
 #section1 .left .line {
-  margin-bottom: -12px;
+  margin-bottom: 0px;
   margin-top: -32px;
 }
 
@@ -78,6 +78,7 @@ a {
   text-shadow: 0px 1px 0px #2f6627;
   font-weight: bold;
   word-spacing: 1px;
+  margin: -10px;
 }
 
 #section1 .left .Button:hover {
@@ -108,6 +109,9 @@ a {
   margin: 10px;
   font-size: 12px;
   word-spacing: 1px;
+}
+#section1 .left .btndiv .buttonA {
+  margin: -10px;
 }
 #section1 .left .signdiv .signup:hover {
   color: rgb(251, 197, 252);
@@ -160,8 +164,12 @@ a {
 #section2 > .gases > button:hover > img {
   transform: scale(1.1);
   user-select: none;
-  /* palitan ko ba icon? */
-  /* di pantay pantay e */
+  opacity: 70%;
+}
+
+#section2 > .gases > button:active > img {
+  position: relative;
+  top: 2px;
 }
 
 #section2 > .gases > button > img {
