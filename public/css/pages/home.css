@@ -127,6 +127,17 @@
   width: 32px;
   height: 32px;
   cursor: pointer;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.section.one > .social-icons__container > img:hover {
+  background-color: #cbafe7;
+}
+
+.section.one > .social-icons__container > img:active {
+  position: relative;
+  top: 2px;
 }
 
 .section.two {
@@ -246,8 +257,8 @@
 }
 
 .section.four > .select-payment > .payment:hover {
-  background: linear-gradient(red, transparent),
-    linear-gradient(to top left, lime, transparent),
+  background: linear-gradient(rgb(166, 110, 222), transparent),
+    linear-gradient(to top left, rgb(136, 47, 187), transparent),
     linear-gradient(to top right, blue, transparent);
   background-blend-mode: screen;
 }

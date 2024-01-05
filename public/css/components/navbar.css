@@ -46,3 +46,11 @@
   color: #371d50;
   background: #a59bd5;
 }
+
+.navbar img {
+  border-radius: 50px;
+  border-color: white;
+  background-color: white;
+  padding: 2px;
+  margin-right: 5px;
+}
