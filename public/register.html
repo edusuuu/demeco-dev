@@ -40,10 +40,22 @@
           </div>
           <div class="Textbox">
             <h3>Gender</h3>
-            <input class="radio" type="radio" name="gender" id="Male" />
-            <h3>ㅤMaleㅤㅤ</h3>
-            <input class="radio" type="radio" name="gender" id="Female" />
-            <h3>ㅤFemale</h3>
+            <input
+              class="radio"
+              type="radio"
+              name="gender"
+              id="Male"
+              value="Male"
+            />
+            <label>ㅤMaleㅤㅤ</label>
+            <input
+              class="radio"
+              type="radio"
+              name="gender"
+              id="Female"
+              value="Female"
+            />
+            <label>ㅤFemale</label>
             <h3>ㅤㅤㅤㅤㅤㅤㅤㅤㅤ</h3>
             <h3>Date of Birth:</h3>
             <input type="date" class="birth" id="bday" />
@@ -95,8 +107,7 @@
             id="RegBtn"
           />
           <br />
-          <!--Hi edzz!-->
-          <!--Hi edzz!-->
+
           <div class="divline">
             <h5>__________________________________________________________</h5>
             <h5>ㅤㅤ</h5>
@@ -121,16 +132,57 @@
       .addEventListener("click", async function () {
         console.log("RegBtn clicked");
 
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirm_password").value;
+        const fname = document.getElementById("fname").value;
+        const lname = document.getElementById("lname").value;
+        const gender = (
+          document.querySelector('input[name="gender"]:checked') || {}
+        ).value;
+        const bday = document.getElementById("bday").value;
+        const phonenum = document.getElementById("phonenum").value;
+
+        // Check if all required fields are filled
+        if (
+          !email ||
+          !password ||
+          !confirmPassword ||
+          !fname ||
+          !lname ||
+          !gender ||
+          !bday ||
+          !phonenum
+        ) {
+          alert("Please fill in all required fields.");
+          return;
+        }
+
+        // Check if password and confirm password match
+        if (password !== confirmPassword) {
+          alert("Passwords Does not match.");
+          return;
+        }
+        if (
+          password.length < 6 ||
+          !password.match(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)
+        ) {
+          alert(
+            "Password must be at least 6 characters long and contain both letters and numbers."
+          );
+          return;
+        }
+
         const formData = {
-          username: document.getElementById("email").value,
-          password: document.getElementById("password").value,
-          fname: document.getElementById("fname").value,
-          lname: document.getElementById("lname").value,
-          gender: (document.querySelector('input[name="gender"]:checked') || {})
-            .value,
-          bday: document.getElementById("bday").value,
-          email: document.getElementById("email").value,
-          phonenum: document.getElementById("phonenum").value,
+          username: email,
+          password: password,
+          fname: fname,
+          lname: lname,
+          gender: gender,
+          bday: bday,
+          email: email,
+          phonenum: phonenum,
         };
 
         const response = await fetch("http://localhost:8080/register", {
@@ -143,6 +195,13 @@
 
         const result = await response.json();
         console.log(result);
+
+        // Check the server response and show appropriate message
+        if (result.success) {
+          alert("Registration successful!");
+        } else {
+          alert("Registration failed. Please try again.");
+        }
 
         // You can add additional handling based on the server response here
       });

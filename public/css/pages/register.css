@@ -75,6 +75,7 @@
 }
 .regBtn:hover {
   background-color: #cbafe7;
+  color: #371d50;
 }
 
 .regBtn:active {
@@ -127,7 +128,7 @@
 }
 
 .input::placeholder {
-  color: #000000;
+  color: black;
 }
 
 .divstyle {
@@ -180,6 +181,7 @@
 }
 .signup-with-facebook:hover {
   background-color: #cbafe7;
+  color: #000000;
 }
 
 .signup-with-facebook:active {
