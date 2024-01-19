@@ -28,39 +28,55 @@
               placeholder="First name"
               type="text"
               required
+              id="fname"
             />
-            <input class="input" placeholder="Last name" type="text" required />
+            <input
+              class="input"
+              placeholder="Last name"
+              type="text"
+              required
+              id="lname"
+            />
           </div>
           <div class="Textbox">
             <h3>Gender</h3>
-            <input class="radio" type="radio" name="gender" />
+            <input class="radio" type="radio" name="gender" id="Male" />
             <h3>ㅤMaleㅤㅤ</h3>
-            <input class="radio" type="radio" name="gender" />
+            <input class="radio" type="radio" name="gender" id="Female" />
             <h3>ㅤFemale</h3>
             <h3>ㅤㅤㅤㅤㅤㅤㅤㅤㅤ</h3>
             <h3>Date of Birth:</h3>
-            <input type="date" class="birth" />
+            <input type="date" class="birth" id="bday" />
           </div>
           <div>
             <h3>Login & Credentials</h3>
-            <input class="input" placeholder="E-mail" type="text" required />
+            <input
+              class="input"
+              placeholder="E-mail"
+              type="text"
+              required
+              id="email"
+            />
             <input
               class="input"
               placeholder="Phone Number"
               type="text"
               required
+              id="phonenum"
             />
             <input
               class="input"
               placeholder="Password"
               type="password"
               required
+              id="password"
             />
             <input
               class="input"
               placeholder="Confirm Password"
               type="password"
               required
+              id="confirm_password"
             />
           </div>
           <div class="divstyle">
@@ -71,9 +87,13 @@
               <a href="/register">Privacy Policy.</a>
             </h4>
           </div>
-          <a href="index.html" class="Btncontainer">
-            <input type="button" value="Create your Account" class="regBtn" />
-          </a>
+
+          <input
+            type="button"
+            value="Create your Account"
+            class="regBtn"
+            id="RegBtn"
+          />
           <br />
           <!--Hi edzz!-->
           <!--Hi edzz!-->
@@ -95,4 +115,36 @@
       </div>
     </div>
   </body>
+  <script>
+    document
+      .getElementById("RegBtn")
+      .addEventListener("click", async function () {
+        console.log("RegBtn clicked");
+
+        const formData = {
+          username: document.getElementById("email").value,
+          password: document.getElementById("password").value,
+          fname: document.getElementById("fname").value,
+          lname: document.getElementById("lname").value,
+          gender: (document.querySelector('input[name="gender"]:checked') || {})
+            .value,
+          bday: document.getElementById("bday").value,
+          email: document.getElementById("email").value,
+          phonenum: document.getElementById("phonenum").value,
+        };
+
+        const response = await fetch("http://localhost:8080/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+        console.log(result);
+
+        // You can add additional handling based on the server response here
+      });
+  </script>
 </html>

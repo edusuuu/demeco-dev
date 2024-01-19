@@ -15,3 +15,4 @@ app.get("/admin-page", (_, res) => res.sendFile(`${__dirname}/public/admin-page.
 
 let handleServerConnection = (error) => console.log(error ? `${error.message}` : `Server is running on port ${PORT}`)
 app.listen(PORT, handleServerConnection)
+
