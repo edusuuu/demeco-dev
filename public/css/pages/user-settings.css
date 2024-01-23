@@ -6,10 +6,42 @@
 .bg {
   background-image: url(/../assets/bg_homepage.png);
   background-size: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
-.regform {
+.imgUpload {
+  width: fit-content;
+  margin-left: -70px;
+  align-items: start;
+}
+
+.imgUpload::-webkit-file-upload-button {
+  margin-left: 80px;
+  background-color: #59238d;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 8px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  padding: 8px 15px;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.imgUpload:hover {
+  background-color: #59238d;
+  color: #ffffff;
+  width: fit-content;
+}
+
+.imgUpload:active {
+  position: relative;
+  top: 2px;
+}
+
+.editform {
   display: flex;
   align-items: center;
   position: relative;
@@ -17,31 +49,40 @@
   max-width: fit-content;
   position: relative;
   left: 50%;
-  height: 100%;
-  padding-top: 100px;
-  padding-bottom: 40px;
-  transform: translateX(-50%);
   color: white;
 }
+.editform > .user {
+  align-self: right;
+  width: 100vh;
+  height: 70px;
+  padding-left: 500px;
+  align-content: right;
+  margin-bottom: 50px;
+}
+.editform > .user > img {
+  width: 100%;
+  height: 100%;
+}
 
-.regform h1 {
+.editform h1 {
   font-size: 28px;
   word-spacing: 1px;
 }
 
-.regdiv {
+.editform {
   display: flex;
   position: relative;
   align-items: left;
   border: 2px solid white;
   border-radius: 20px;
+  margin-top: 50px;
   flex-direction: column;
   width: 1000px;
   position: relative;
   left: 50%;
   height: fit-content;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding-top: 50px;
+  padding-bottom: 30px;
   padding-left: 20px;
   transform: translateX(-50%);
   color: white;
@@ -58,24 +99,24 @@
   align-content: center;
 }
 .regBtn {
-  align-self: center;
-  background-color: transparent;
+  background-color: #59238d;
   border-radius: 28px;
   border: 1px solid #ffffff;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
+  margin-left: 290px;
   font-family: Arial;
   font-size: 15px;
+  margin-top: 10px;
   padding: 10px 22px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #2f6627;
+  text-shadow: 0px 1px 0px #2a2d2a;
   font-weight: bold;
   width: 300px;
 }
 .regBtn:hover {
-  background-color: #cbafe7;
-  color: #371d50;
+  background-color: #934fd6;
 }
 
 .regBtn:active {
@@ -128,7 +169,7 @@
 }
 
 .input::placeholder {
-  color: black;
+  color: #000000;
 }
 
 .divstyle {
@@ -137,10 +178,6 @@
   align-items: center;
   margin-top: 25px;
   margin-bottom: 20px;
-}
-.divstyle h4 {
-  font-size: 12px;
-  font-weight: normal;
 }
 
 .divstyle a {
@@ -156,38 +193,6 @@
   flex-direction: row;
 }
 
-.signup-with-facebook {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  gap: 10px;
-  justify-content: center;
-  max-width: 300px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  border-radius: 20px;
-  border: solid;
-  border-width: 1px;
-  color: white;
-  border-color: white;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  padding: 10px;
-  background-color: transparent;
-  margin-top: 20px;
-  margin-bottom: -10px;
-}
-.signup-with-facebook:hover {
-  background-color: #cbafe7;
-  color: #000000;
-}
-
-.signup-with-facebook:active {
-  position: relative;
-  top: 2px;
-}
 .birth::-webkit-calendar-picker-indicator {
   background: transparent;
   bottom: 0;

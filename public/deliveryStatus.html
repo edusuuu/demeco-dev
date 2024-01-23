@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/components/navbar.css" />
+    <link rel="stylesheet" href="css/components/dropdown-menu.css" />
+    <link rel="stylesheet" href="css/pages/deliveryStatus.css" />
+    <title>Delivery Status</title>
+  </head>
+  <body>
+    <div class="bg">
+      <ul class="navbar">
+        <li class="links"><a href="/Home">home</a></li>
+        <li class="links"><a href="Home/#products">products</a></li>
+        <li class="links"><a href="Home/#map">map</a></li>
+        <li class="links"><a href="/#payment_method">payment method</a></li>
+        <li class="links"><a href="/#about_us">about us</a></li>
+        <li class="links">
+          <div class="dropdown">
+            <button class="dropbtn">profile </a></button>
+            <ul class="dropdown-content">
+              <li><a href="#">Order Status</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Log out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    <div class="container">
+      <div class="details">
+        <div class="order">
+          <h1> Order <span> Status </span></h1>
+          </div>
+          <div class="date">
+            <p> Expected Arrival 01/25/2024</p>
+            <p> USPS <b> 0123456789 </p>
+          </div>
+      </div>
+
+      <div class="track">
+        <ul id="progress" class="text-center">
+        <li class="active"> </li>
+        <li class="active"> </li>
+        <li class="active"> </li>
+        <li class="active"> </li>
+        </ul>
+    </div>
+
+    <div class="lists">
+      <div class="list">
+        <img src="../assets/ship1.png" alt="1st">
+        <p> Order <br> Procesed </p>
+      </div>
+
+      <div class="lists">
+        <div class="list">
+          <img src="../assets/ship2.png" alt="2nd">
+          <p> Order <br> Shipped </p>
+        </div>
+
+        <div class="lists">
+          <div class="list">
+            <img src="../assets/ship3.png" alt="3rd">
+            <p> Order <br> Enroute </p>
+          </div>
+
+          <div class="lists">
+            <div class="list">
+              <img src="../assets/ship4.png" alt="4th">
+              <p> Order <br> Arrived </p>
+            </div>
+    </div>
+  </div>
+  </body>
+</html>

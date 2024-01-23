@@ -1,0 +1,163 @@
+.section {
+  padding-top: 80px;
+  min-height: 100vh;
+  position: relative;
+  outline: 1px solid white;
+}
+
+.section.one > .left-right__container {
+  display: flex;
+  min-height: 50vh;
+}
+
+.section.one > .left-right__container > .left {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 40%;
+}
+
+.section.one > .left-right__container > .left > h1 {
+  text-transform: uppercase;
+  font-size: 64px;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+
+.section.one > .left-right__container > .left > hr {
+  min-width: 360px;
+  height: 5px;
+  background: white;
+  border: none;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+
+.section.one > .left-right__container > .left > p {
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+
+.section.one > .left-right__container > .left > .login-btn {
+  cursor: pointer;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+
+.section.one > .left-right__container > .left > .login-btn:hover {
+  background: none;
+}
+
+.section.one > .left-right__container > .left > .login-btn > a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 25px;
+}
+
+.section.one > .left-right__container > .left > .login-btn > a:hover {
+  color: white;
+  background: #371d50;
+}
+
+.section.one > .left-right__container > .left > .new-here-signup-now {
+  color: white;
+  text-decoration: underline;
+  font-size: 18px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+
+.section.one > .left-right__container > .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-basis: 60%;
+}
+
+.section.one > .left-right__container > .right > .tagline > p {
+  font-size: 34px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+
+.section.one > .left-right__container > .right > .demeco-logo {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.section.one > .left-right__container > .right > .demeco-logo > img {
+  object-fit: scale-down;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+
+.section.one > .something-that-is-really-long {
+  color: white;
+  font-size: 17px;
+  max-width: 80vw;
+  margin: 29px;
+  margin-top: 50px;
+  letter-spacing: normal;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.section.one > .social-icons__container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 40px;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
+}
+.section.one > .social-icons__container > img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}

@@ -11,7 +11,7 @@
   position: sticky;
   z-index: 999;
   list-style: none;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .navbar .links {
@@ -45,4 +45,56 @@
 .navbar .links:hover a {
   color: #371d50;
   background: #a59bd5;
+}
+
+/* Add this CSS to your existing styles */
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 1000;
+}
+
+.navbar .dropbtn {
+  background-color: #371d50;
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  z-index: 1001;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 19px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(79, 64, 64, 0.2);
+  top: 100%;
+  left: 0;
+  z-index: 1005;
+  list-style: none;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  list-style: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #a59bd5;
 }
